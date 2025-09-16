@@ -1,0 +1,40 @@
+{
+  "pages": [
+  "pages/account/account",
+  "pages/setting/setting",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weapp",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/account/account",
+        "text": "账户",
+        "iconPath": "assets/icons/account.png",
+        "selectedIconPath": "assets/icons/account_selected.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "assets/icons/setting.png",
+        "selectedIconPath": "assets/icons/setting_selected.png"
+      },
+     
+      {
+  "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "assets/icons/person.png",
+        "selectedIconPath": "assets/icons/person_selected.png"
+      }
+    ]
+  }
+}
