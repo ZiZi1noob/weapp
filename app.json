@@ -1,40 +1,48 @@
 {
+  "entryPagePath": "pages/account/account",
   "pages": [
-  "pages/account/account",
-  "pages/setting/setting",
-    "pages/user/user"
+    "pages/account/account",
+    "pages/setting/setting",
+    "pages/profile/profile"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weapp",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "Mini APP",
+    "navigationBarBackgroundColor": "#202325",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
-    "color": "#888",
-    "selectedColor": "#1AAD19",
-    "backgroundColor": "#fff",
-    "borderStyle": "black",
+    "selectedColor": "#EE660C",
+    "backgroundColor": "#202325",
+    "color": "#98999B",
+    "borderStyle": "white",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/account/account",
-        "text": "账户",
         "iconPath": "assets/icons/account.png",
-        "selectedIconPath": "assets/icons/account_selected.png"
+        "selectedIconPath": "assets/icons/account_orange.png",
+        "text": "账户"
       },
       {
         "pagePath": "pages/setting/setting",
-        "text": "设置",
         "iconPath": "assets/icons/setting.png",
-        "selectedIconPath": "assets/icons/setting_selected.png"
+        "selectedIconPath": "assets/icons/setting_orange.png",
+        "text": "设置"
       },
-     
       {
-  "pagePath": "pages/user/user",
-        "text": "个人",
-        "iconPath": "assets/icons/person.png",
-        "selectedIconPath": "assets/icons/person_selected.png"
+        "pagePath": "pages/profile/profile",
+        "iconPath": "assets/icons/profile.png",
+        "selectedIconPath": "assets/icons/profile_orange.png",
+        "text": "用户"
       }
     ]
-  }
+  },
+  "style": "v2",
+  "renderer": "webview",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }

@@ -1,5 +1,62 @@
+<!--pages/account/account.wxml-->
 <view class="container">
-  <text>账户内容</text>
-  <button bindtap="goSetting">跳转到设置</button>
-  <button bindtap="goUser">跳转到个人</button>
+  <!-- 1. 资产总览 -->
+  <view class="card overview-card">
+    <view class="overview-title">资产总览</view>
+    <view class="overview-content">
+      <!-- 扇形图（可用自定义组件或图片占位） -->
+      <view class="pie-chart"></view>
+      <view class="assets-list">
+        <view class="asset-item cash">
+          <text>现金</text>
+          <text class="percent">30%</text>
+        </view>
+        <view class="asset-item stock">
+          <text>股票</text>
+          <text class="percent">50%</text>
+        </view>
+        <view class="asset-item fund">
+          <text>基金</text>
+          <text class="percent">20%</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 2. 总资产走势 -->
+  <view class="card trend-card">
+    <view class="trend-title">总资产走势</view>
+    <view class="trend-content">
+      <view class="net-value">
+        <text>资产净值</text>
+        <text class="value">¥100,000</text>
+      </view>
+      <view class="daily-profit">
+        <text>当日收益</text>
+        <text class="profit">+¥500</text>
+      </view>
+    </view>
+    <!-- 可加折线图组件 -->
+  </view>
+
+  <!-- 3. 收益日历 -->
+  <view class="card calendar-card">
+    <view class="calendar-title">收益日历</view>
+    <view class="calendar-header">
+      <button class="calendar-btn" bindtap="prevMonth">&lt;</button>
+      <text class="calendar-month">{{year}}年{{month}}月</text>
+      <button class="calendar-btn" bindtap="nextMonth">&gt;</button>
+    </view>
+    <view class="calendar-week-row">
+      <text>日</text><text>一</text><text>二</text><text>三</text><text>四</text><text>五</text><text>六</text>
+    </view>
+    <view class="calendar-grid">
+      <block wx:for="{{calendarDays}}" wx:key="index">
+        <view class="calendar-cell">
+          <text>{{item.day}}</text>
+          <text class="calendar-profit">{{item.profit}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
 </view>

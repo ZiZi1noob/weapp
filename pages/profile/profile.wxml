@@ -1,2 +1,30 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="container">
+  <view class="profile-header">
+    <image class="avatar" src="https://i.pravatar.cc/150?img=3" mode="aspectFill"></image>
+    <view class="user-name">我是牛牛</view>
+    <view class="user-id">ID: 12345678</view>
+  </view>
+  <view class="profile-card-list">
+    <view class="profile-card" bindtap="onCardTap" data-type="lanuage">
+      <image class="card-icon" src="../../assets/icons/lanuage.png"></image>
+      <text class="card-title">语言设置</text>
+      <text class="card-arrow">></text>
+    </view>
+    <view class="profile-card" bindtap="onCardTap" data-type="notification">
+      <image class="card-icon" src="../../assets/icons/theme.png"></image>
+      <text class="card-title">主题风格</text>
+      <text class="card-arrow">></text>
+    </view>
+    <view class="profile-card" bindtap="onCardTap" data-type="privacy">
+      <image class="card-icon" src="../../assets/icons/privacy.png"></image>
+      <text class="card-title">隐私管理</text>
+      <text class="card-arrow">></text>
+    </view>
+    <view class="profile-card" bindtap="onCardTap" data-type="about">
+      <image class="card-icon" src="../../assets/icons/aboutus.png"></image>
+      <text class="card-title">关于我们</text>
+      <text>></text>
+    </view>
+  </view>
+</view>

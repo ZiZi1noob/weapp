@@ -1,28 +1,66 @@
+// pages/setting/setting.js
 Page({
+
+  /**
+   * Page initial data
+   */
   data: {
-    darkMode: true,
-    language: "zh-CN",
+
   },
-  onLoad() {
-    console.log("设置页已加载");
+
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad(options) {
+
   },
+
+  /**
+   * Lifecycle function--Called when page is initially rendered
+   */
+  onReady() {
+
+  },
+
+  /**
+   * Lifecycle function--Called when page show
+   */
   onShow() {
-    console.log("设置页显示");
+
   },
-  toggleDarkMode() {
-    this.setData({ darkMode: !this.data.darkMode });
+
+  /**
+   * Lifecycle function--Called when page hide
+   */
+  onHide() {
+
   },
-  changeLanguage(lang) {
-    this.setData({ language: lang });
+
+  /**
+   * Lifecycle function--Called when page unload
+   */
+  onUnload() {
+
   },
-  goAccount() {
-    wx.switchTab({
-      url: "/pages/account/account",
-    });
+
+  /**
+   * Page event handler function--Called when user drop down
+   */
+  onPullDownRefresh() {
+
   },
-  goUser() {
-    wx.switchTab({
-      url: "/pages/user/user",
-    });
+
+  /**
+   * Called when page reach bottom
+   */
+  onReachBottom() {
+
   },
-});
+
+  /**
+   * Called when user click on the top right corner to share
+   */
+  onShareAppMessage() {
+
+  }
+})

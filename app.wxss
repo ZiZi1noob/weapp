@@ -1,0 +1,17 @@
+/**app.wxss -- global style**/
+page {
+  height: 100vh;
+  background-color: black;
+}
+.container {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+
+.card {
+  background-color: rgb(30, 31, 33);
+  border-radius: 24rpx;
+  margin-top: 24rpx;
+  padding: 32rpx 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}

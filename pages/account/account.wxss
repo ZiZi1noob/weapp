@@ -1,8 +1,117 @@
-.container {
+/* pages/account/account.wxss */
+
+/* 标题样式 */
+.overview-title,
+.trend-title,
+.calendar-title {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 24rpx;
+}
+
+/* 资产总览内容布局 */
+.overview-content {
+  display: flex;
+  align-items: center;
+  gap: 32rpx;
+}
+
+.pie-chart {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: conic-gradient(#ee660c 0% 30%, #3cb371 30% 80%, #1e90ff 80% 100%);
+  margin-right: 24rpx;
+}
+
+.assets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.asset-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #fff;
+  padding: 8rpx 0;
+}
+
+.asset-item.cash .percent {
+  color: #ee660c;
+}
+.asset-item.stock .percent {
+  color: #3cb371;
+}
+.asset-item.fund .percent {
+  color: #1e90ff;
+}
+
+/* 总资产走势布局 */
+.trend-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.net-value .value,
+.daily-profit .profit {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ee660c;
+  margin-left: 12rpx;
+}
+
+/* 收益日历布局 */
+.calendar-content {
+  margin-top: 16rpx;
+}
+
+.calendar-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #111;
+  margin-bottom: 16rpx;
+}
+.calendar-btn {
+  background: none;
+  border: none;
   color: #fff;
+  font-size: 32rpx;
+  margin: 0 16rpx;
+}
+.calendar-month {
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.calendar-week-row {
+  display: flex;
+  justify-content: space-between;
+  color: #98999b;
+  font-size: 24rpx;
+  margin-bottom: 8rpx;
+}
+.calendar-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar-cell {
+  width: 13%;
+  background-color: #232425;
+  color: #fff;
+  border-radius: 12rpx;
+  text-align: center;
+  padding: 12rpx 0 4rpx 0;
+  font-size: 24rpx;
+  margin-bottom: 8rpx;
+}
+.calendar-profit {
+  display: block;
+  font-size: 20rpx;
+  color: #ee660c;
 }

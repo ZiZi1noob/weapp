@@ -1,5 +1,0 @@
-<view class="container">
-  <text>个人内容</text>
-  <button bindtap="goAccount">跳转到账户</button>
-  <button bindtap="goSetting">跳转到设置</button>
-</view>

@@ -1,0 +1,58 @@
+/* pages/profile/profile.wxss */
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+  margin-top: 86rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-bottom: 24rpx;
+  background: #98999b;
+}
+
+.user-name {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.user-id {
+  color: #98999b;
+  font-size: 24rpx;
+  margin-bottom: 16rpx;
+}
+
+.profile-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  background: rgb(30, 31, 33);
+  color: #fff;
+  border-radius: 16rpx;
+  padding: 32rpx 24rpx;
+  font-size: 28rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.card-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 24rpx;
+}
+
+.card-title {
+  flex: 1;
+}
