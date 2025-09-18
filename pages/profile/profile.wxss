@@ -8,6 +8,42 @@
   margin-top: 86rpx;
 }
 
+.custom-sheet {
+  width: 90vw;
+  background: #333;
+  border-radius: 32rpx 32rpx 0 0;
+  padding: 32rpx 0;
+  box-shadow: 0 -8rpx 32rpx rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+.custom-sheet-item {
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  padding: 32rpx 0;
+  border-bottom: 1px solid #444;
+}
+.custom-sheet-item:last-child {
+  border-bottom: none;
+}
+
+.custom-toast {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 160rpx;
+  max-width: 80vw;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 24rpx 40rpx;
+  border-radius: 32rpx;
+  text-align: center;
+  font-size: 32rpx;
+  z-index: 9999;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.2);
+}
+
 .avatar {
   width: 120rpx;
   height: 120rpx;

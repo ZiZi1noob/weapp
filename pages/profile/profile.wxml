@@ -1,29 +1,41 @@
 <!--pages/profile/profile.wxml-->
 <view class="container">
+  <!-- 自定义 ActionSheet -->
+  <view wx:if="{{showCustomSheet}}" class="custom-sheet-mask" bindtap="onSheetClose">
+    <view class="custom-sheet" catchtap="">
+      <block wx:for="{{sheetList}}" wx:for-index="index" wx:for-item="item">
+        <view class="custom-sheet-item" data-index="{{index}}" bindtap="onSheetSelect">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <!-- 自定义 Toast -->
+  <view wx:if="{{showCustomToast}}" class="custom-toast">
+    <text>{{toastText}}</text>
+  </view>
   <view class="profile-header">
     <image class="avatar" src="https://i.pravatar.cc/150?img=3" mode="aspectFill"></image>
     <view class="user-name">我是牛牛</view>
     <view class="user-id">ID: 12345678</view>
   </view>
   <view class="profile-card-list">
-    <view class="profile-card" bindtap="onCardTap" data-type="lanuage">
-      <image class="card-icon" src="../../assets/icons/lanuage.png"></image>
-      <text class="card-title">语言设置</text>
+    <view class="profile-card" bindtap="onCardTap" data-type="language">
+      <image class="card-icon" src="../../assets/icons/language.png"></image>
+      <text class="card-title">{{ i18n.language_setting }}</text>
       <text class="card-arrow">></text>
     </view>
     <view class="profile-card" bindtap="onCardTap" data-type="notification">
       <image class="card-icon" src="../../assets/icons/theme.png"></image>
-      <text class="card-title">主题风格</text>
+      <text class="card-title">{{ i18n.theme }}</text>
       <text class="card-arrow">></text>
     </view>
     <view class="profile-card" bindtap="onCardTap" data-type="privacy">
       <image class="card-icon" src="../../assets/icons/privacy.png"></image>
-      <text class="card-title">隐私管理</text>
+      <text class="card-title">{{ i18n.privacy }}</text>
       <text class="card-arrow">></text>
     </view>
     <view class="profile-card" bindtap="onCardTap" data-type="about">
       <image class="card-icon" src="../../assets/icons/aboutus.png"></image>
-      <text class="card-title">关于我们</text>
+      <text class="card-title">{{ i18n.about_us }}</text>
       <text>></text>
     </view>
   </view>

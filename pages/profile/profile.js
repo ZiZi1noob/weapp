@@ -1,66 +1,48 @@
-// pages/profile/profile.js
+const { setLocale, t } = require("../../utils/i18n.js");
+
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    i18n: {},
+    showCustomToast: false,
+    toastText: "",
   },
-
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad(options) {
-
+  onLoad() {
+    const lang = wx.getStorageSync("language") || "zh";
+    setLocale(lang);
+    this.setData({
+      i18n: {
+        language_setting: t("language_setting"),
+        theme: t("theme"),
+        privacy: t("privacy"),
+        about_us: t("about_us"),
+      },
+    });
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady() {
-
+  onCardTap(e) {
+    const type = e.currentTarget.dataset.type;
+    if (type === "language") {
+      wx.showActionSheet({
+        itemList: ["简体中文", "繁體中文", "English"],
+        success: (res) => {
+          let lang = "zh";
+          if (res.tapIndex === 1) lang = "zh-TW";
+          if (res.tapIndex === 2) lang = "en";
+          setLocale(lang);
+          this.setData({
+            i18n: {
+              language_setting: t("language_setting"),
+              theme: t("theme"),
+              privacy: t("privacy"),
+              about_us: t("about_us"),
+            },
+            showCustomToast: true,
+            toastText: t("language_switch_success"),
+          });
+          setTimeout(() => {
+            this.setData({ showCustomToast: false });
+          }, 2000);
+        },
+      });
+    }
   },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage() {
-
-  }
-})
+});
